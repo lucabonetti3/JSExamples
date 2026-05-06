@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+
+            body{
+                font-family: Arial, sans-serif;
+                max-width: 500px;
+                margin: 50px auto;
+                padding: 20px;
+            }
+
+            .form-group{
+                margin-bottom: 15px
+            }
+
+            label{
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            input{
+                width: 100%;
+                padding: 10px;
+                border: 2px solid#ddd;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            input.error{
+                border-color: red;
+            }
+
+            .error-message{
+                color: red;
+                font-size: 14px;
+                margin-top: 5px;
+            }
+
+            button{
+                background-color: #007bff;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+            }
+
+            button:hover{
+                background: #0056b3;
+            }
+
+            .success{
+                color: green;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="Email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Inserisci la tua email">
+            </div>
+
+            <div class="form-group">
+                <label for="Password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Inserisci la tua password">
+            </div>
+
+            <button type="submit">Login con FormData</button>
+            <button type="button" id="directAccess">Login con accesso diretto</button>
+        </form>
+
+        <div id="result"></div>
+        <script src="/formEvents.js"></script>
+    </body>
+</html>
